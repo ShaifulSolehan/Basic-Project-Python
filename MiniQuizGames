@@ -1,0 +1,42 @@
+print("Hey there! Welcome to Mini Quiz Games")
+ready = input("Are you ready to play the games? Type Yes or No: ")
+if ready.lower() == 'no':
+    quit()
+
+elif ready.lower() == 'yes':
+    print("Lets go play the game")
+
+else:
+    print("Wrong input!")
+    quit()
+
+score = 0
+question = input("First question; What is RAM stand for: ")
+if question.lower() == "random access memory":
+    print("Yes you are correct!")
+    score += 1
+else:
+    print("Nope you are wrong")
+
+question = input("Second question; What is CPU stand for: ")
+if question.lower() == "central processing unit":
+    print("Wow you are so good!")
+    score += 1
+else:
+    print("It's okay you can learn next time")
+
+question = input("Third question; What is ROM stand for: ")
+if question.lower() == "read only memory":
+    print("Absolutely correct!")
+    score += 1
+else:
+    print("Wrong answer!")
+
+question = input("Last question; What is GPU stand for: ")
+if question.lower() == "graphics processing units":
+    print("Your answer is correct!")
+    score += 1
+else:
+    print("Try again next time!")
+
+print("This is the end of this game: You have answered " + str(score) + " question correctly, Good Job!")
