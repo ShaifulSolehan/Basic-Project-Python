@@ -1,0 +1,41 @@
+import random
+
+print("Welcome to Rock,Paper and Scissors game, You against the computer ")
+
+computerwins=0
+userwin = 0
+gamesChoices = ["rock", "paper", "scissors"]
+
+while True:
+    user_pick = input("Please type Rock/Paper/Scissors to play and Q to exit the game: ").lower()
+    if user_pick == "q":
+        break
+    if user_pick not in gamesChoices:
+        continue
+    randomNumber = random.randint(0,2)
+    computer_pick = gamesChoices[randomNumber]
+    print("The computer pick is ",computer_pick)
+    if user_pick == "rock" and computer_pick == "scissors":
+        print("You won!")
+        userwin += 1
+    elif user_pick == "paper" and computer_pick == "rock":
+        print("You won!")
+        userwin += 1
+    elif user_pick== "scissors" and computer_pick == "paper":
+        print("You won!")
+        userwin += 1
+    elif user_pick == computer_pick:
+        print("Its draw")
+    else:
+        print("You lost!")
+        computerwins += 1
+
+print("You won",userwin,"point")
+print("Computer won",computerwins,"point")
+if (userwin> computerwins):
+    print("You win the games,Congrats")
+elif (userwin == computerwins):
+    print("Its draw!")
+else:
+    print("You lose the game, Try again next time")
+print("Goodbye!")
